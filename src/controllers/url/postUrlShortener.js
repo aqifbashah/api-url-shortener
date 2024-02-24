@@ -22,7 +22,7 @@ async function postUrlShortener(req, res) {
     await pool.query(query, values);
     res.json({
       longUrl: urlLong,
-      shortUrl: `http://localhost:3000/${shortCode}`,
+      shortUrl: `https://api-url-shortener-3s9c.onrender.com/${shortCode}`,
     });
   } catch (error) {
     res.status(500).json({ message: "Internal Server Error" });
